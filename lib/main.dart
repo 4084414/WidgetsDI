@@ -21,7 +21,7 @@ class _PantallaPruebaState extends State<PantallaPrueba> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Prueba QuantityStepper')),
+      appBar: AppBar(title: const Text('QuantityStepper con Flutter + Dart')),
       body: Center(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -36,6 +36,11 @@ class _PantallaPruebaState extends State<PantallaPrueba> {
                 if (limite == StepperLimit.max) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     const SnackBar(content: Text('Has llegado al máximo')),
+                  );
+                }
+                if (limite == StepperLimit.min) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    const SnackBar(content: Text('Has llegado al mínimo')),
                   );
                 }
               },
